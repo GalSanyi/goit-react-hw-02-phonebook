@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import s from './ContactForm.module.css';
 import shortid from 'shortid';
+import PropTypes from 'prop-types';
 
 export default class ContactForm extends Component {
   state = { name: '', number: '' };
@@ -65,3 +66,7 @@ export default class ContactForm extends Component {
     );
   }
 }
+
+ContactForm.prototype = {
+  onSubmit: PropTypes.array.isRequired,
+};
